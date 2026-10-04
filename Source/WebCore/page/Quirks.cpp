@@ -772,7 +772,7 @@ bool Quirks::shouldIgnoreInputModeNone() const
 // rdar://176981763
 bool Quirks::shouldAllowMixedContentConnectionToLoopback(const URL& url)
 {
-    if (m_document->url().host() != "account.battle.net"_s || m_document->url().path().startsWith("/login"_s))
+    if (m_document->url().host() != "web.stremio.com"_s)
         return false;
     if (auto address = IPAddress::fromString(url.host().toStringWithoutCopying()))
         return address->isLoopback();
